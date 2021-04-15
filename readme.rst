@@ -2,7 +2,7 @@
 Share Any File
 ###################
 
-This Application is powered by CodeIgniter framework. 
+This Application is powered by Codeigniter framework. 
 
 *******************
 Features
