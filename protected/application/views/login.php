@@ -42,47 +42,48 @@
           <div class="inner cover">
             <h1 class="cover-heading">Authenticaton</h1>
             
-            <form class="form-horizontal" name= "myForm" ng-app="formApp" ng-controller="formController" >
-              <div ng-show="error" class="alert alert-danger">{{error}}</div>
-  <div class="form-group">
-    <label for="username" class="col-sm-2 control-label">Username</label>
-    <div class="col-sm-6">
-      <input type="text" name="user" nd-model="formData.username" class="form-control" id="user" placeholder="useranme">
-    <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
-    <span ng-show="myForm.user.$error.required">Username is required.</span>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-6">
-      <input type="password" name="password" nd-model="formData.password" class="form-control" id="inputPassword3" placeholder="Password">
-   
-      <span style="color:red" ng-show="myForm.password.$dirty && myForm.password.$invalid">
-    <span ng-show="myForm.password.$error.required">Username is required.</span>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-6">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <input type="submit" class="btn btn-default"  ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
-  myForm.email.$dirty && myForm.email.$invalid" value="Login">
+            <form class="form-horizontal" id= "myForm" action="<?=base_url()?>login/authenticate" >
+              <div class="alert alert-danger">
+				<?php $noti = $this->session->userdata('noti'); if($noti!='') echo $noti; ?>
+			  </div>
+			  <div class="form-group">
+				<label for="username" class="col-sm-2 control-label">Username</label>
+				<div class="col-sm-6">
+				  <input type="text" name="username"  class="form-control" id="user" placeholder="username">
+				<span style="color:red" >
+				<span>Username is required.</span>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-6">
+				  <input type="password" name="password"  class="form-control" id="inputPassword3" placeholder="Password">
+			   
+				  <span style="color:red" >
+				<span>Username is required.</span>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<div class="col-sm-6">
+				  <div class="checkbox">
+					<label>
+					  <input type="checkbox"> Remember me
+					</label>
+				  </div>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				  <input type="submit" class="btn btn-default"  value="Login">
 
-    </div>
-  </div>
-</form>
+				</div>
+			  </div>
+			</form>
           </div>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Powered by <a href="https://refineitbd.com">REFINE IT</a>.</p>
+              <p>Powered by <a href="https://infomasud.com">infomasud</a>.</p>
             </div>
           </div>
 
@@ -98,15 +99,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>assets/js/jquery-1.11.3.min.js"><\/script>')</script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script>
-         var app = angular.module('formApp', []);
-app.controller('formController', function($scope, $http) {
-    $http.get("<?php echo base_url(); ?>login/authenticate")
-  .then(function (response) {alert(response);});
-});
-
-    </script>
     
   </body>
 </html>

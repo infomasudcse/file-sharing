@@ -7,12 +7,13 @@ class Dashboard extends CI_Controller {
 	public function __construct()
        {
             parent::__construct();
-            if(!$this->session->userdata('userid')){ redirect('login');}
+            if($this->session->userdata('userid') === ''){ redirect('login');}
             $this->load->model('servermodel', 'sm',true);
        }
 
 	public function index()
 	{
+		
 		$data['title']=" Admin Dashboard : File Share ";
 		$data['category'] = $this->sm->getCategory();
 		$data['content'] = $this->load->view('dashboard_content',$data,true);

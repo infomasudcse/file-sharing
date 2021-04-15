@@ -20,20 +20,25 @@ class Login extends CI_Controller{
 
     	$inputs = array('username'=>$this->input->post('username', true),'password'=>$this->input->post('password', true));
       
-      
-        if(!$this->validate($inputs)){
+		$result = $this->validate($inputs); 
+       
+        if(!$result){
             $this->session->set_userdata('noti','Username/Password Invalid ! ');
             redirect("login");
         }else{
+			//echo $this->session->userdata('userid');
             redirect("dashboard");
         }
+		
+		
     }
 
     function validate($inputs){        
 
         
         $result = $this->logmodel->getUserInfo($inputs);
-       
+      
+	   
      
         if($result == null){
              return false;
