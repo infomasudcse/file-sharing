@@ -1,0 +1,271 @@
+html, body
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	background-image: url(../phpimages/back.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+.common
+{
+	width: 998px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+.top
+{
+	width: 998px;
+	position: relative;
+	z-index: 20;
+	float: left;
+	height: 100px;
+}
+.logo
+{
+	width: 266px;
+	position: relative;
+	z-index: 999;
+	float: left;
+	height: 120px;
+	padding-top: 11px;
+}
+#container {
+	width: 732px;
+	float: left;
+}
+
+#nav {
+	position: relative;
+	float: left;
+	height: 30px;
+	width: 732px;
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+#nav li {
+	float: right;
+	list-style: none;
+	padding-right: 0px;
+	padding-left: 20px;
+	display: inline;
+	margin: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#nav li a {
+	color: #256D2F;
+	z-index: 2;
+	position: relative;
+	cursor: pointer;
+	float: left;
+	font-size: 18px;
+	text-decoration: none;
+	width: 100%;
+	font-weight: normal;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#nav li a:hover
+{
+	color: #000;
+	text-decoration: none;
+}
+#nav li.divider
+{
+	/*background-image: url(../phpimages/divider.gif);
+	background-repeat: no-repeat;
+	background-position: right top;*/
+	padding-right: 20px;
+}
+.tvlogos
+{
+	float: left;
+	width: 508px;
+	position: relative;
+	min-height: 350px;
+	padding-bottom: 120px;
+}
+.tvlogos h1
+{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	height: 50px;
+	width: 508px;
+	list-style-type: none;
+}
+.tvlogos h1 span
+{
+	display: none;
+}
+.tvlogos h1.radioo
+{
+	/*background-image: url(../phpimages/radio.png);*/
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.tvlogos h1.tv
+{
+	/*background-image: url(../phpimages/tv.png);*/
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.tvlogos ul
+{
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.tvlogos ul li
+{
+	display: inline;
+	margin: 0px;
+	float: left;
+	height: 68px;
+	width: 115px;
+	padding-top: 0px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	list-style-type: none;
+}
+.sowtv
+{
+	width: 490px;
+	float: left;
+	padding-top: 55px;
+	padding-bottom: 120px;
+}
+img
+{
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+.copyright
+{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	position: absolute;
+	z-index: 999;
+	left: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: center;
+	/*background-image: url(../phpimages/footer.gif);*/
+	background-repeat: repeat-x;
+	background-position: left top;
+	margin-right: auto;
+	margin-left: auto;
+	right: 0px;
+	bottom: 0px;
+	line-height: 22px;
+}
+/*ICON SLIDER*/
+.menu{
+	width: 732px;
+	height: 104px;
+	position: relative;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-top: 18px;
+	float: left;
+}
+.item{
+    position:relative;
+    background-color:#f0f0f0;
+    float:right;
+    width:52px;
+    margin:0px 5px;
+    height:52px;
+    border:2px solid #ddd;
+    -moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+    -moz-box-shadow:1px 1px 3px #555;
+    -webkit-box-shadow:1px 1px 3px #555;
+    box-shadow:1px 1px 3px #555;
+    cursor:pointer;
+    overflow:hidden;
+}
+.link{
+    left:2px;
+    top:2px;
+    position:absolute;
+    width:48px;
+    height:48px;
+}
+.icon_home{
+	background-color: transparent;
+	/*background-image: url(../phpimages/home.png);*/
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+/*
+.icon_mail{
+    background:transparent url(../phpimages/mail.png) no-repeat top left;
+}
+.icon_help{
+    background:transparent url(../phpimages/help.png) no-repeat top left;
+}
+.icon_find{
+    background:transparent url(../phpimages/find.png) no-repeat top left;
+}
+.icon_photos{
+    background:transparent url(../phpimages/photos.png) no-repeat top left;
+}
+*/
+.item_content{
+	position: absolute;
+	height: 52px;
+	width: 120px;
+	overflow: hidden;
+	left: 56px;
+	top: 7px;
+	background: transparent;
+	display: none;
+}
+.item_content h2{
+	color: #aaa;
+	text-shadow: 1px 1px 1px #fff;
+	background-color: transparent;
+	font-size: 14px;
+	padding-top: 10px;
+	margin: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.item_content h2 a{
+	background-color: transparent;
+	color: #333;
+	text-shadow: 1px 1px 1px #fff;
+	text-decoration: none;
+}
+.item_content h2 a:hover{
+    color:#0b965b;
+}
+.item_content p {
+    background-color:transparent;
+    display:none;
+}
+.item_content p input{
+    border:1px solid #ccc;
+    padding:1px;
+    width:155px;
+    float:left;
+    margin-right:5px;
+}
